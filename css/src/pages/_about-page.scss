@@ -1,0 +1,365 @@
+.about-page {
+  min-height: 100vh;
+  width: 100vw;
+
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 80vh;
+    width: 100%;
+
+    @include media(">=desktop") {
+      flex-direction: row;
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      background-color: $primary-teal;
+      width: 90%;
+      margin-top: 20px;
+      padding: 40px;
+      z-index: 2;
+
+      @include media(">=desktop") {
+        margin-left: 10%;
+        width: 50%;
+        max-width: 550px;
+        padding: 100px 60px;
+      }
+
+      h1 {
+        color: $light-green;
+      }
+
+      span {
+        color: $white;
+      }
+    }
+
+    &-right {
+      flex: 1;
+      width: 100%;
+      min-height: 30vh;
+      z-index: 2;
+      position: relative;
+
+      @include media(">=desktop") {
+        min-height: 80vh;
+      }
+
+      &-img {
+        position: absolute;
+        bottom: 10%;
+        right: 0;
+        width: 300px;
+
+        @include media(">=desktop") {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &__patterns {
+    color: $primary-green;
+    margin-top: 5%;
+    text-align: center;
+  }
+
+  &__boxes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    padding: 5% 5%;
+
+    @include media(">=desktop") {
+      grid-template-columns: repeat(4, 1fr);
+      place-items: center;
+      gap: 20px;
+    }
+
+    &-box {
+      width: 100%;
+      height: 400px;
+      min-width: 300px;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 20px;
+      padding: 50px;
+      position: relative;
+
+      &-text.two {
+        position: absolute;
+        bottom: -5%;
+        right: 0;
+
+        @include media(">=tablet") {
+          bottom: -7.5%;
+          right: 30%;
+        }
+
+        @include media(">=desktop") {
+          bottom: -2.5%;
+          right: -2%;
+        }
+      }
+
+      &-text.four {
+        position: absolute;
+        top: -10%;
+        right: 5%;
+
+        @include media(">=tablet") {
+          right: 30%;
+          top: -12.5%;
+        }
+
+        @include media(">=desktop") {
+          top: 0;
+          right: 3%;
+        }
+      }
+
+      &.one {
+        background-image: url("http://changing-waste-patterns.local/wp-content/uploads/2024/02/2015-02-18-19.06.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &.two {
+        background-image: url("http://changing-waste-patterns.local/wp-content/uploads/2024/01/CWP_Images4.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include media(">=desktop") {
+          width: 85%;
+        }
+      }
+
+      &.three {
+        background-image: url("http://changing-waste-patterns.local/wp-content/uploads/2024/01/CWP_Images2.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include media(">=desktop") {
+          width: 70%;
+        }
+      }
+
+      &.four {
+        background-image: url("http://changing-waste-patterns.local/wp-content/uploads/2024/01/CWP_Images5.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include media(">=desktop") {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  &__founder {
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10%;
+      gap: 20px;
+
+      @include media(">=desktop") {
+        flex-direction: row;
+        gap: 150px;
+      }
+    }
+
+    &-left {
+      width: 100%;
+      &-img {
+        width: 100%;
+      }
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+  }
+
+  &__vision {
+    padding-top: 200px;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10%;
+      gap: 20px;
+
+      @include media(">=desktop") {
+        flex-direction: row;
+        gap: 100px;
+      }
+    }
+
+    &-left,
+    &-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      padding: 80px;
+
+      h5 {
+        width: 70%;
+        max-width: 200px;
+      }
+
+      @include media(">=tablet") {
+        height: 500px;
+
+        h5 {
+          width: 50%;
+          max-width: 300px;
+        }
+      }
+
+      @include media(">=desktop") {
+        height: 500px;
+      }
+    }
+
+    &-left {
+      background-image: url("http://changing-waste-patterns.local/wp-content/uploads/2024/01/CWP_Background-Shape2.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-top: -20%;
+    }
+
+    &-right {
+      background-image: url("http://changing-waste-patterns.local/wp-content/uploads/2024/01/CWP_Background-Shape3.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__greenwashing {
+    background-color: $primary-teal;
+    padding: 1% 0%;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10%;
+      gap: 20px;
+
+      @include media(">=desktop") {
+        flex-direction: row;
+        gap: 150px;
+      }
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      width: 100%;
+
+      &-title {
+        color: $light-green;
+      }
+
+      &-content {
+        color: $white;
+      }
+    }
+    &-right {
+      &-img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__navigation {
+    background-color: $light-peach;
+    padding: 5% 0px;
+    border-bottom: 1px solid black;
+
+    &-boxes {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+
+      @include media(">=tablet") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include media(">=desktop") {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+      }
+
+      &-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+        padding: 60px;
+
+        &.one {
+          background-color: $light-green;
+        }
+
+        &.two {
+          background-color: $primary-orange;
+        }
+
+        &.three {
+          background-color: $primary-violet;
+        }
+
+        &.four {
+          background-color: $primary-peach;
+        }
+
+        &-icon {
+          &.two {
+            filter: brightness(0) invert(1) grayscale(1) contrast(9); /* Add this line */
+            fill: white; /* Add this line to ensure paths are filled with white */
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.events {
+  height: fit-content;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: $primary-violet !important;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 50px;
+    gap: 2.5rem;
+  }
+
+  &__blog {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+
+    @include media(">=tablet") {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0rem 15rem;
+    }
+
+    &-empty {
+      text-align: center;
+      grid-column: span 2;
+    }
+  }
+
+  &__button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+  }
+}

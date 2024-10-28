@@ -1,0 +1,40 @@
+.button {
+  display: flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  font-family: $Futura;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 300ms all ease;
+  width: fit-content;
+
+  &.primary-teal {
+    background-color: $primary-teal;
+    color: white;
+  }
+
+  &.primary-violet {
+    background-color: $primary-violet;
+    color: $primary-teal;
+  }
+
+  &.light-green {
+    background-color: $light-green;
+    color: $primary-teal;
+  }
+
+  &.primary-orange {
+    background-color: $primary-orange;
+    color: white;
+  }
+
+  &.ghost-green {
+    padding: 0px;
+    background-color: transparent;
+    color: $light-green;
+  }
+}

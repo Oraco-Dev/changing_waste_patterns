@@ -1,0 +1,98 @@
+.custom-form {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  border-radius: 0px !important;
+  width: 100% !important;
+
+  @include media(">=desktop") {
+    flex-direction: row !important;
+  }
+
+  input,
+  textarea,
+  select {
+    min-width: 280px !important;
+    border: none !important;
+    outline: none !important;
+    padding: 32px !important;
+    border-radius: 0px !important;
+    font-family: $Futura !important;
+    background-color: $light-teal !important;
+    color: $white !important;
+    font-size: 20px !important;
+  }
+
+  textarea {
+    padding: 16px;
+  }
+
+  .gfield_label {
+    display: none !important;
+  }
+}
+
+#gform_submit_button_1 {
+  padding: 24px !important;
+  background-color: $light-green !important;
+  color: $primary-teal !important;
+  font-size: 16px !important;
+  font-family: $Futura !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+}
+
+.gform_required_legend {
+  display: none !important;
+}
+
+.gform-theme--foundation .gform_footer,
+.gform-theme--foundation .gform_page_footer {
+  margin-block-start: 0px !important;
+}
+
+// END CALL TO ACTION FORM
+
+/*
+----------------
+----------------
+----------------
+*/
+
+// START CONTACT FORM
+
+.contact-form {
+  input,
+  textarea,
+  select {
+    border: 1px solid black !important;
+    outline: none !important;
+    border-radius: 0px !important;
+    font-family: $Futura !important;
+    font-size: 20px !important;
+  }
+
+  .gfield_label {
+    font-family: $Futura !important;
+    font-size: 16px !important;
+  }
+}
+
+.gform-theme--foundation .gform_fields {
+  grid-row-gap: 10px !important;
+}
+
+#gform_submit_button_2 {
+  margin-top: 16px !important;
+  padding: 16px !important;
+  border: none !important;
+  background-color: $primary-orange !important;
+  color: $white !important;
+  font-size: 16px !important;
+  font-family: $Futura !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  min-width: 200px;
+}

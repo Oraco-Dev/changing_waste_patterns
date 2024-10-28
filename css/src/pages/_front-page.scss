@@ -1,0 +1,429 @@
+.front-page {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: $light-peach;
+  overflow-x: hidden;
+
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 5%;
+    background-color: $light-peach;
+
+    &-title {
+      margin-top: 5%;
+    }
+
+    &-boxes {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+      margin-top: 5%;
+
+      @include media(">=desktop") {
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+        gap: 20px;
+      }
+
+      &-box {
+        width: 100%;
+        height: 400px;
+        min-width: 300px;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 40px;
+        padding: 50px;
+        position: relative;
+
+        &-text.two {
+          position: absolute;
+          bottom: -5%;
+          right: 0;
+
+          @include media(">=tablet") {
+            bottom: -7.5%;
+            right: 30%;
+          }
+
+          @include media(">=desktop") {
+            bottom: -2.5%;
+            right: -2%;
+          }
+        }
+
+        &-text.four {
+          position: absolute;
+          top: -10%;
+          right: 5%;
+
+          @include media(">=tablet") {
+            right: 30%;
+            top: -12.5%;
+          }
+
+          @include media(">=desktop") {
+            top: 0;
+            right: 3%;
+          }
+        }
+
+        &.one {
+          background-image: url("http://changing-waste-patterns.local/wp-content/uploads/2024/01/CWP_Pattern7.svg");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          h5 {
+            width: 100%;
+            max-width: 300px;
+          }
+        }
+
+        &.two {
+          background-image: url("http://changing-waste-patterns.local/wp-content/uploads/2024/01/CWP_Images4.png");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          @include media(">=desktop") {
+            width: 85%;
+          }
+        }
+
+        &.three {
+          background-image: url("http://changing-waste-patterns.local/wp-content/uploads/2024/01/CWP_Pattern5.svg");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          h5 {
+            width: 100%;
+            max-width: 300px;
+          }
+
+          @include media(">=desktop") {
+            width: 70%;
+          }
+        }
+
+        &.four {
+          background-image: url("http://changing-waste-patterns.local/wp-content/uploads/2024/01/CWP_Images5.png");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          @include media(">=desktop") {
+            width: 40%;
+          }
+        }
+      }
+    }
+
+    // &-boxes {
+    //   margin-top: 5%;
+    //   display: flex;
+    //   flex-direction: column;
+
+    //   @include media(">tablet") {
+    //     flex-direction: row;
+    //   }
+
+    //   &-box {
+    //     position: relative;
+    //     flex: 1;
+    //     padding-top: 25%;
+
+    //     &-content {
+    //       position: absolute;
+    //       transform: translate(-50%, -50%);
+
+    //       &-img {
+    //         height: 100%;
+    //         width: 100%;
+    //       }
+
+    //       &.one {
+    //         display: flex;
+    //         flex-direction: column;
+    //         align-items: center;
+    //         width: 70%;
+    //         gap: 2rem;
+    //         top: 50%;
+    //         left: 50%;
+    //         text-align: center;
+    //       }
+
+    //       &.two {
+    //         width: 85%;
+    //         top: 50%;
+    //         left: 55%;
+    //       }
+
+    //       &.three {
+    //         width: 75%;
+    //         top: 50%;
+    //         left: 50%;
+    //       }
+
+    //       &.four {
+    //         width: 65%;
+    //         top: 50%;
+    //         left: 45%;
+    //       }
+    //     }
+
+    //     &.one {
+    //       background-color: $light-green;
+    //     }
+    //   }
+    // }
+  }
+
+  &__intro {
+    position: relative;
+    width: 100vw;
+    margin-top: 10%;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      @include media(">=tablet") {
+        flex-direction: row;
+      }
+    }
+
+    &-icon {
+      position: absolute;
+
+      &.one {
+        right: -50px;
+        top: 40%;
+      }
+
+      &.two {
+        right: 0px;
+        top: 90%;
+
+        @include media(">=tablet") {
+          top: 70%;
+          right: 125px;
+        }
+      }
+    }
+
+    &-left {
+      flex: 1;
+
+      &-img {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+
+    &-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 2.5rem;
+
+      @include media(">=desktop") {
+        padding: 5rem;
+      }
+
+      &-title {
+        color: $primary-green;
+      }
+    }
+  }
+
+  &__started {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 70vh;
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+      background-image: url("http://changing-waste-patterns.local/wp-content/uploads/2024/01/CWP_Background-Shape1.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      min-height: 600px;
+
+      @include media(">=tablet") {
+        width: 50%;
+      }
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        color: $primary-teal;
+        gap: 20px;
+        width: 70%;
+        margin-left: 15%;
+      }
+
+      &-right {
+        flex: 1;
+      }
+    }
+  }
+
+  &__waste {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 5%;
+    min-height: 80vh;
+    height: fit-content;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    @include media(">=tablet") {
+      flex-direction: row;
+    }
+
+    &-left {
+      position: relative;
+      flex: 1;
+
+      &-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        min-height: 400px;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+
+    &-right {
+      flex: 1;
+      background-color: $primary-green;
+      display: flex;
+      align-items: center;
+      padding-top: 400px;
+
+      @include media(">=tablet") {
+        padding-top: 0px;
+      }
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 5rem;
+
+        h3,
+        h4,
+        h5,
+        p {
+          color: white !important;
+        }
+      }
+    }
+  }
+
+  &__faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 2rem;
+    background-color: $primary-peach;
+    height: fit-content;
+    width: 100%;
+
+    &-title {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    height: fit-content;
+    padding: 5rem 0rem;
+    &-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    &-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+  }
+
+  &__blogs {
+    min-height: 70vh;
+    height: fit-content;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+      padding-bottom: 50px;
+
+      @include media(">=desktop") {
+        align-items: center;
+        flex-direction: row;
+        gap: 0px;
+      }
+    }
+
+    &-blog {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+
+      @include media(">=tablet") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include media(">=desktop") {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.contact-page {
+  min-height: 100vh;
+  width: 100vw;
+
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: calc(97vh - 90px);
+    height: fit-content;
+
+    @include media(">=desktop") {
+      flex-direction: row;
+    }
+
+    &-left {
+      width: 100%;
+      background-color: $primary-peach;
+      padding: 50px;
+
+      @include media(">=desktop") {
+        width: 50%;
+        padding: 100px;
+      }
+
+      &-meta {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+
+        h5 {
+          padding-bottom: 20px;
+        }
+
+        a {
+          font-weight: normal;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &-right {
+      width: 100%;
+      min-height: 600px;
+      position: relative;
+
+      @include media(">=desktop") {
+        width: 50%;
+      }
+
+      &-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__navigation {
+    background-color: $light-peach;
+    padding: 5% 0px;
+
+    &-boxes {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+
+      @include media(">=tablet") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include media(">=desktop") {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+      }
+
+      &-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+        padding: 60px;
+        text-decoration: none;
+
+        &.one {
+          background-color: $light-green;
+        }
+
+        &.two {
+          background-color: $primary-orange;
+        }
+
+        &.three {
+          background-color: $primary-violet;
+        }
+
+        &.four {
+          background-color: $primary-peach;
+        }
+
+        &-icon {
+          &.two {
+            filter: brightness(0) invert(1) grayscale(1) contrast(9); /* Add this line */
+            fill: white; /* Add this line to ensure paths are filled with white */
+          }
+        }
+      }
+    }
+  }
+}

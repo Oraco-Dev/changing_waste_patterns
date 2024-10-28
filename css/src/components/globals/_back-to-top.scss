@@ -1,0 +1,17 @@
+.bt__button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: $primary-orange;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-img {
+    height: 50%;
+  }
+}

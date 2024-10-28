@@ -1,0 +1,58 @@
+.splide {
+  z-index: 100;
+  width: 80%;
+  text-align: center;
+}
+
+.splide__slide {
+  &-content {
+    color: white !important;
+    font-size: 25px;
+    font-family: $DMSans;
+    line-height: 35px;
+  }
+
+  &-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2.5rem 0rem 1rem 0rem;
+
+    &-name {
+      color: white !important;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: $Futura;
+    }
+
+    &-role {
+      color: white !important;
+      font-size: 16px;
+      font-family: $Futura;
+    }
+  }
+}
+
+.slider-buttons {
+  display: flex;
+  gap: 20px;
+  z-index: 100;
+
+  button {
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__next {
+    height: 40px;
+    width: 40px;
+  }
+
+  &__prev {
+    height: 40px;
+    width: 40px;
+  }
+}
